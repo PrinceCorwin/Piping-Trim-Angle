@@ -1,0 +1,53 @@
+/* roots and customs */
+:root {
+  --clr-lighter: #def0fa;
+  --clr-light: #54a6be;
+  --clr-midtone: #01799c;
+  --clr-dark: #012069;
+  --clr-contrast1: #ffcd00;
+  --clr-contrast2: #dadbdd;
+  --clr-contrast3: #636669;
+  --ff-primary: "Jura", sans-serif;
+  --ff-accent: ;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-contrast2);
+}
+
+/* classes below */
+.navbar-brand {
+  color: white !important;
+}
+.navbar {
+  background: var(--clr-dark);
+}
+.my-links a {
+  color: white !important;
+  text-decoration: none;
+  padding: 7px 15px !important;
+  margin: 8px;
+  border: 2px solid var(--clr-contrast1);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.my-links a:hover {
+  border: 2px solid white;
+}
+
+/* id's below */
