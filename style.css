@@ -17,6 +17,18 @@
   box-sizing: border-box;
 }
 
+/* get rid of arrows in number input */
+/* chrome, safari, edge, opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 body,
 h1,
 h2,
@@ -51,3 +63,28 @@ body {
 }
 
 /* id's below */
+.container-main {
+  padding: 10px;
+  /* background-color: red; */
+}
+.title {
+  background-color: red;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+}
+.top-row {
+  display: flex;
+}
+#psize,
+#trim-angle {
+  width: 3rem;
+  /* display: inline; */
+}
+.input-row {
+  display: flex;
+  justify-content: space-between;
+}
