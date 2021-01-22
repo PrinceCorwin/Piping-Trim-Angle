@@ -73,9 +73,10 @@ body {
   padding: 10px;
   /* background-color: var(--clr-light); */
   margin-bottom: 20px;
+  border: 3px solid var(--clr-dark);
   border-radius: 8px;
   background-color: var(--clr-dark);
-  box-shadow: inset -2px -2px 5px white, inset 2px 2px 5px white;
+  box-shadow: inset -1px -1px 5px white, inset 1px 1px 5px white;
 }
 
 .input {
@@ -84,7 +85,7 @@ body {
   padding: 20px;
   background-color: transparent;
   border-radius: 8px;
-  box-shadow: -5px -5px 20px var(--clr-midtone), 5px 5px 10px var(--clr-midtone);
+  box-shadow: -5px -5px 10px var(--clr-dark), 5px 5px 10px var(--clr-dark);
 }
 .top-row {
   display: flex;
