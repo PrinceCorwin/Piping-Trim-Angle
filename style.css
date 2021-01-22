@@ -68,16 +68,23 @@ body {
   /* background-color: red; */
 }
 .title {
+  color: var(--clr-contrast2);
   text-align: center;
-  background-color: red;
+  padding: 10px;
+  /* background-color: var(--clr-light); */
   margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: var(--clr-dark);
+  box-shadow: inset -2px -2px 5px white, inset 2px 2px 5px white;
 }
 
 .input {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background-color: blue;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: -5px -5px 20px var(--clr-midtone), 5px 5px 10px var(--clr-midtone);
 }
 .top-row {
   display: flex;
@@ -110,6 +117,7 @@ tr:nth-child(even) {
 }
 img {
   width: 300px;
-  margin-left: 30px;
+  margin-left: 50px;
+
   /* height: 100%; */
 }
