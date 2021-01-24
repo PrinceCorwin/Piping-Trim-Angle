@@ -58,6 +58,14 @@ main {
 input {
   width: 3rem;
 }
+img {
+  /* background-color: red; */
+  width: 300px;
+  /* display: block; */
+  /* margin-left: 50px; */
+
+  /* height: 100%; */
+}
 
 /* classes below */
 .navbar-brand {
@@ -81,6 +89,7 @@ input {
 }
 
 .glass {
+  /* margin: 30px; */
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -97,21 +106,10 @@ input {
   box-shadow: -5px -5px 10px var(--clr-lighter), 5px 5px 10px white; */
 }
 
-.input-row {
-  margin-top: 3rem;
-  text-align: center;
-  /* background-color: red; */
-  color: var(--clr-contrast2);
-}
-
-/* id's below */
-#glass-title {
-  /* width: 60%;
-  min-height: 80vh; */
-}
 .title {
   /* color: var(--clr-dark); */
   color: var(--clr-contrast1);
+  margin-bottom: 3rem !important;
 
   /* text-align: center; */
   /* padding: 10px !important; */
@@ -124,10 +122,54 @@ input {
   /* inset 2px 2px 3px var(--clr-midtone); */
 }
 
-img {
-  width: 300px;
-  display: block;
-  /* margin-left: 50px; */
+.input {
+  margin-bottom: 3rem;
+  text-align: right;
+  /* margin-right: auto; */
+  /* background-color: red; */
+  color: var(--clr-contrast2);
+}
 
-  /* height: 100%; */
+.input-field {
+  margin-bottom: 1rem;
+}
+
+.answer {
+  margin: 5vh 5vh 0 0;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 30vh;
+}
+.output-row {
+  color: var(--clr-contrast2);
+  display: flex;
+  flex-direction: row;
+}
+.labels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem 0 1rem;
+}
+
+.answer-column {
+  display: flex;
+  flex-direction: column;
+}
+.answer-row {
+  display: flex;
+  flex-direction: row;
+}
+/* id's below */
+#glass-title {
+  margin: 5vh;
+  /* width: 60%; */
+  width: 500px;
+  height: 65vh;
 }

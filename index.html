@@ -74,8 +74,8 @@
     <main>
       <div class="glass" id="glass-title">
         <h1 class="title">Elbow <em>Trim-Angle</em> Wizard</h1>
-        <div class="input-row">
-          <div class="user-input">
+        <div class="input">
+          <div class="input-field">
             <label for="psize">Elbow NPS:</label>
             <input
               type="number"
@@ -88,7 +88,7 @@
             />
             <div id="psizeInvalid"></div>
           </div>
-          <div class="user-input">
+          <div class="input-field">
             <label for="trim-angle"> Trim Angle:</label>
             <input
               type="number"
@@ -101,47 +101,74 @@
             />
             <div id="angleInvalid"></div>
           </div>
-          <img src="trim.svg" />
         </div>
-        <!-- <div class="container-main">
-        <div class="top-row">
-          <div class="input">
-            <h1 class="title">Elbow Trim Angle Wizard</h1>
-
-            <div class="input-row">
-              <div class="user-input">
-                <label for="psize">Elbow NPS:</label>
-                <input
-                  type="number"
-                  step=".25"
-                  min=".5"
-                  max="48"
-                  id="psize"
-                  name="psize"
-                  placeholder="3"
-                />
-                <div id="psizeInvalid"></div>
+        <img src="trim.svg" />
+      </div>
+      <div class="answer-column">
+        <div class="answer-row">
+          <div class="glass answer">
+            <h3 class="title">Short Radius (1D)</h3>
+            <div class="output-row">
+              <div class="labels">
+                <div>I.A.L.:</div>
+                <div>O.A.L.:</div>
+                <div>L.L.:</div>
               </div>
-              <div class="user-input">
-                <label for="trim-angle"> Trim Angle:</label>
-                <input
-                  type="number"
-                  step=".25"
-                  min=".5"
-                  max="48"
-                  id="trim-angle"
-                  name="trim-angle"
-                  placeholder="45"
-                />
-                <div id="angleInvalid"></div>
+              <div class="data">
+                <div>output here</div>
+                <div>output here</div>
+                <div>output here</div>
               </div>
-            </div>
-            <div class="answer">
-              
             </div>
           </div>
-          <img src="trim.svg" />
-        </div>-->
+          <div class="glass answer">
+            <h3 class="title">Long Radius (1.5D)</h3>
+            <div class="output-row">
+              <div class="labels">
+                <div>I.A.L.:</div>
+                <div>O.A.L.:</div>
+                <div>L.L.:</div>
+              </div>
+              <div class="data">
+                <div>output here</div>
+                <div>output here</div>
+                <div>output here</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <div class="glass answer">
+            <h3 class="title">3D</h3>
+            <div class="output-row">
+              <div class="labels">
+                <div>I.A.L.:</div>
+                <div>O.A.L.:</div>
+                <div>L.L.:</div>
+              </div>
+              <div class="data">
+                <div>output here</div>
+                <div>output here</div>
+                <div>output here</div>
+              </div>
+            </div>
+          </div>
+          <div class="glass answer">
+            <h3 class="title">5D</h3>
+            <div class="output-row">
+              <div class="labels">
+                <div>I.A.L.:</div>
+                <div>O.A.L.:</div>
+                <div>L.L.:</div>
+              </div>
+              <div class="data">
+                <div>output here</div>
+                <div>output here</div>
+                <div>output here</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <script src="script.js"></script>
