@@ -72,8 +72,38 @@
       </div>
     </nav>
     <main>
-      <div class="glass"></div>
-      <!-- <div class="container-main">
+      <div class="glass" id="glass-title">
+        <h1 class="title">Elbow <em>Trim-Angle</em> Wizard</h1>
+        <div class="input-row">
+          <div class="user-input">
+            <label for="psize">Elbow NPS:</label>
+            <input
+              type="number"
+              step=".25"
+              min=".5"
+              max="48"
+              id="psize"
+              name="psize"
+              placeholder="3"
+            />
+            <div id="psizeInvalid"></div>
+          </div>
+          <div class="user-input">
+            <label for="trim-angle"> Trim Angle:</label>
+            <input
+              type="number"
+              step=".25"
+              min=".5"
+              max="48"
+              id="trim-angle"
+              name="trim-angle"
+              placeholder="45"
+            />
+            <div id="angleInvalid"></div>
+          </div>
+          <img src="trim.svg" />
+        </div>
+        <!-- <div class="container-main">
         <div class="top-row">
           <div class="input">
             <h1 class="title">Elbow Trim Angle Wizard</h1>
@@ -111,8 +141,8 @@
             </div>
           </div>
           <img src="trim.svg" />
-        </div>
-      </div> -->
+        </div>-->
+      </div>
     </main>
     <script src="script.js"></script>
   </body>
