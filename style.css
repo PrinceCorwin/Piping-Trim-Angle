@@ -241,14 +241,26 @@ img {
   }
 }
 @media screen and (max-width: 800px) {
+  body {
+    width: 100vw;
+  }
   main {
-    min-width: 500px;
+    margin: 0 !important;
+    width: 100vw !important;
+    padding: 10px !important;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  /* .answer-row {
-    flex-direction: column;
-    align-items: center;
-  } */
+  .answer {
+    padding: 0 !important;
+    margin: 0 0 10px 0 !important;
+    width: 90vw;
+
+    display: flex;
+    justify-content: center;
+  }
+  #glass-title {
+    width: 90vw;
+  }
 }
