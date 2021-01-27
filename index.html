@@ -105,28 +105,13 @@
             id="calculate"
             type="button"
             value="CALCULATE"
-            onclick="trimData()"
+            onclick="validate()"
           />
         </div>
         <img src="trim.svg" />
       </div>
       <div class="answer-column">
         <div class="answer-row">
-          <div class="glass answer">
-            <h3 class="title">Short Radius (1D)</h3>
-            <div class="output-row">
-              <div class="labels">
-                <div>I.A.L.:</div>
-                <div>O.A.L.:</div>
-                <div>L.L.:</div>
-              </div>
-              <div class="data">
-                <div>output here</div>
-                <div>output here</div>
-                <div>output here</div>
-              </div>
-            </div>
-          </div>
           <div class="glass answer">
             <h3 class="title">Long Radius (1.5D)</h3>
             <div class="output-row">
@@ -136,9 +121,24 @@
                 <div>L.L.:</div>
               </div>
               <div class="data">
-                <div>output here</div>
-                <div>output here</div>
-                <div>output here</div>
+                <div id="longInside">output here</div>
+                <div id="longOutside">output here</div>
+                <div id="longLaying">output here</div>
+              </div>
+            </div>
+          </div>
+          <div class="glass answer">
+            <h3 class="title">Short Radius (1D)</h3>
+            <div class="output-row">
+              <div class="labels">
+                <div>I.A.L.:</div>
+                <div>O.A.L.:</div>
+                <div>L.L.:</div>
+              </div>
+              <div class="data">
+                <div id="shortInside">output here</div>
+                <div id="shortOutside">output here</div>
+                <div id="shortLaying">output here</div>
               </div>
             </div>
           </div>
@@ -153,9 +153,9 @@
                 <div>L.L.:</div>
               </div>
               <div class="data">
-                <div>output here</div>
-                <div>output here</div>
-                <div>output here</div>
+                <div id="threeInside">output here</div>
+                <div id="threeOutside">output here</div>
+                <div id="threeLaying">output here</div>
               </div>
             </div>
           </div>
@@ -168,9 +168,9 @@
                 <div>L.L.:</div>
               </div>
               <div class="data">
-                <div>output here</div>
-                <div>output here</div>
-                <div>output here</div>
+                <div id="fiveInside">output here</div>
+                <div id="fiveOutside">output here</div>
+                <div id="fiveLaying">output here</div>
               </div>
             </div>
           </div>
