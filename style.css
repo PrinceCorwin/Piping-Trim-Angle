@@ -149,9 +149,11 @@ img {
   height: 30vh;
 }
 .output-row {
+  /* background-color: rebeccapurple; */
   color: var(--clr-contrast2);
   display: flex;
   flex-direction: row;
+  /* justify-content: flex-end; */
 }
 
 .labels,
@@ -159,19 +161,29 @@ img {
   /* background-color: red; */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   font-size: 2rem;
 }
 .labels > div,
 .data > div {
   margin-bottom: 1rem !important;
+  padding: 0 10px 0 10px;
 }
-
+.labels > div {
+  background-color: var(--clr-dark);
+  border-radius: 10px 0 0 10px;
+}
+.data > div {
+  background-color: var(--clr-contrast2);
+  color: black;
+  border-radius: 0 3px 3px 0;
+}
 .labels {
-  align-items: flex-end;
+  text-align: right;
 }
 .data {
-  align-items: flex-start;
-  padding: 0 1rem 0 2rem;
+  /* align-items: flex-start; */
+  /* padding: 0 1rem 0 2rem; */
 }
 
 /* .answer-column {
