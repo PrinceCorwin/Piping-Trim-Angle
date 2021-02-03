@@ -42,6 +42,7 @@ p,
 }
 .item1 {
   grid-area: input-box;
+  height: 80vh;
 }
 .item2 {
   grid-area: long;
