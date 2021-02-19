@@ -5,13 +5,11 @@
     <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   
     <link rel="stylesheet" href="style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+  
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap"
@@ -19,61 +17,47 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target="#myNavbar"
-          >
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a
-            class="navbar-brand"
-            href="https://princecorwin.github.io/Piping-Apps/"
-            >Piping Apps</a
-          >
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li class="my-links">
-              <a href="https://princecorwin.github.io/Dummy-Leg-Calculator/"
-                >Dummy Leg</a
-              >
-            </li>
-            <li class="active">
-              <a href="https://princecorwin.github.io/Piping-Trim-Angle/"
-                >Trim Angle</a
-              >
-            </li>
-            <li class="my-links">
-              <a href="https://princecorwin.github.io/Piping-Surface-Area/"
-                >Surface Area</a
-              >
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="#"
-                ><span class="glyphicon glyphicon-user"></span> About</a
-              >
-            </li>
-            <li>
-              <a href="mailto:amalfi615@gmail.com"
-                ><span class="glyphicon glyphicon-envelope"></span> Contact</a
-              >
-            </li>
-          </ul>
-        </div>
+    <nav>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
       </div>
+
+      <ul class="nav-links">
+        <li id="gallery">
+          <a
+            href="https://princecorwin.github.io/steve-corwin-personal-portfolio/"
+            >GALLERY</a
+          >
+        </li>
+      
+        <li>
+          <a href="https://princecorwin.github.io/Piping-Trim-Angle/"
+            >Trim Angle</a
+          >
+        </li>
+        <li>
+          <a href="https://princecorwin.github.io/Piping-Surface-Area/"
+            >Surface Area</a
+          >
+        </li>
+        <li id="float"><div>
+        <a href="help.html" target="_blank"
+        ><i class="fa fa-fw fa-question-circle"></i> Help</a
+        >
+        
+        <a href="mailto:amalfi615@gmail.com"
+        ><i class="fa fa-fw fa-envelope"></i> Contact</a
+        >
+      </div></li>
+        
+        </li>
+      </ul>
     </nav>
     <main>
       <div class="glass item1">
-        <h1 class="title">Elbow <em>Trim-Angle</em> Wizard</h1>
+        <h1 class="title">Elbow <em> Trim-Angle </em>Wizard</h1>
         <div class="input">
           <div class="input-field">
             <label for="psize">Elbow NPS:</label>
