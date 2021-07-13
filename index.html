@@ -2,50 +2,54 @@
 <html lang="en">
   <head>
     <title>Elbow Trim Wizard</title>
-    <link rel="shortcut icon" type="image/ico" href="images/favicon/favicon.ico" />
-<link
-  rel="apple-touch-icon"
-  sizes="180x180"
-  href="images/favicon/apple-touch-icon.png"
-/>
-<link
-  rel="icon"
-  type="image/png"
-  sizes="32x32"
-  href="images/favicon/favicon-32x32.png"
-/>
-<link
-  rel="icon"
-  type="image/png"
-  sizes="16x16"
-  href="images/favicon/favicon-16x16.png"
-/>
-<!-- access to webmanifest currently blocked on my site. Need to resolve -->
-<link rel="manifest" href="https://amalfimakesit.com/site.webmanifest" />
+    <link
+      rel="shortcut icon"
+      type="image/ico"
+      href="images/favicon/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <!-- access to webmanifest currently blocked on my site. Need to resolve -->
+    <link rel="manifest" href="https://amalfimakesit.com/site.webmanifest" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-   <!-- social media display meta tags -->
-   <meta property="og:title" content="ELBOW TRIM ANGLE WIZARD" />
-   <meta
-     property="og:description"
-     content="Hassle-free calculation of custom pipe elbow trim angles"
-   />
-   <meta
-     property="og:image"
-     content="https://amalfimakesit.com/images/SocMedThumbnails/trimPreview.png"
-   />
-   <meta
-     property="og:url"
-     content="https://amalfimakesit.com/apps/elbow-trim-angle"
-   />
-   <meta name="twitter:card" content="summary_large_image" />
+    <!-- social media display meta tags -->
+    <meta property="og:title" content="ELBOW TRIM ANGLE WIZARD" />
+    <meta
+      property="og:description"
+      content="Hassle-free calculation of custom pipe elbow trim angles"
+    />
+    <meta
+      property="og:image"
+      content="https://amalfimakesit.com/apps/elbow-trim-angle/images/trimPreview.png"
+    />
+    <meta
+      property="og:url"
+      content="https://amalfimakesit.com/apps/elbow-trim-angle"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="trim-style.css" />
     <script
-    src="https://kit.fontawesome.com/6c80d95586.js"
-    crossorigin="anonymous"
-  ></script>
-  
+      src="https://kit.fontawesome.com/6c80d95586.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap"
@@ -53,142 +57,157 @@
     />
   </head>
   <body>
+    <!-- help menu -->
+    <div id="help">
+      <div id="help-title">
+        <div>
+          Calculates inside-arc-length (IAL), outside-arc-length (OAL), and
+          laying-length (LL) of 90° pipe elbow trimmed to custom angle
+        </div>
+        <i class="far fa-times-circle"></i>
+      </div>
+      <div class="help-desc">
+        <ul id="helpList">
+          <li>Enter fitting NPS in decimal inches ( 1.25, 2, 3.5, 12, etc )</li>
+          <li>Enter desired trim angle in decimal degrees (45, 23.5, etc)</li>
+          <li>
+            NOTE: All calculations rounded to the nearest 1/16<sup>th</sup> of
+            an inch
+          </li>
+        </ul>
+        <div>ELBOW TRIM ANGLE WIZARD</div>
+        <div class="version">Version 1.2.7.21</div>
+        <div><small>&copy; Copyright 2019, Steve Corwin Amalfitano</small></div>
+      </div>
+    </div>
     <nav>
       <div class="hamburger">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
       </div>
-
       <ul class="nav-links">
-        <li id="gallery">
-          <a
-            href="https://amalfimakesit.com"
-            >HOME</a
-          >
-        </li>
-      
+        <div id="home">
+          <a href="https://amalfimakesit.com/">HOME</a>
+        </div>
         <li>
-          <a href="../Dummy-Leg-Calculator/index.html"
-            >Dummy Leg</a
-          >
+          <a href="../Dummy-Leg-Calculator">Dummy Leg</a>
         </li>
         <li>
-          <a href="../pipe-surface-area/index.html"
-            >Surface Area</a
-          >
+          <a href="../pipe-surface-area">Surface Area</a>
         </li>
-        <li id="float"><div>
-        <a href="help.html" target="_blank"
-        ><i class="fa fa-fw fa-question-circle"></i> Help</a
-        >
-        
-        <a href="mailto:amalfimakesit@gmail.com"
-        ><i class="fa fa-fw fa-envelope"></i> Contact</a
-        >
-      </div></li>
-        
+        <li id="hide-btn">
+          <div id="hide-btn-txt">Hide Image</div>
+        </li>
+        <li id="help-btn">
+          <div>
+            About
+            <i class="fas fa-info-circle"></i>
+          </div>
         </li>
       </ul>
     </nav>
+
     <main>
-      <div class="glass item1">
-        <h1 class="title">ELBOW TRIM-ANGLE WIZARD</h1>
-        <div class="input">
-          <div class="input-field">
-            <label for="psize">Elbow NPS:</label>
-            <input
-              type="number"
-              step=".25"
-              min=".5"
-              max="48"
-              id="psize"
-              name="psize"
-              placeholder="3"
-            />
-            <div id="psizeInvalid"></div>
-          </div>
-          <div class="input-field">
-            <label for="trim-angle"> Trim Angle:</label>
-            <input
-              type="number"
-              step=".25"
-              min=".5"
-              max="48"
-              id="trim-angle"
-              name="trim-angle"
-              placeholder="45"
-            />
-            <div id="angleInvalid"></div>
-          </div>
-          <input
-            id="calculate"
-            type="button"
-            value="CALCULATE"
-            onclick="validate()"
-          />
-        </div>
-        <img src="images/trim.svg" />
-      </div>
-
-      <div class="glass answer item2">
-        <h3 class="title">LONG RADIUS (1.5D)</h3>
-        <div class="output-row">
-          <div class="labels">
-            <div>I A L</div>
-            <div>O A L</div>
-            <div>L L</div>
-          </div>
-          <div class="data">
-            <div id="longInside">'Calculate'</div>
-            <div id="longOutside">'Calculate'</div>
-            <div id="longLaying">'Calculate'</div>
+      <div class="app-row">
+        <div class="glass user-input">
+          <h1 class="title">ELBOW TRIM-ANGLE WIZARD</h1>
+          <div class="input">
+            <img id="trim-img" src="images/trim.svg" />
+            <div class="input-column">
+              <div class="input-field">
+                <label for="psize">Elbow NPS:</label>
+                <input
+                  type="number"
+                  step=".25"
+                  min=".5"
+                  max="48"
+                  id="psize"
+                  name="psize"
+                  placeholder="3"
+                />
+                <div id="psizeInvalid"></div>
+              </div>
+              <div class="input-field">
+                <label for="trim-angle"> Trim Angle:</label>
+                <input
+                  type="number"
+                  step=".25"
+                  min=".5"
+                  max="48"
+                  id="trim-angle"
+                  name="trim-angle"
+                  placeholder="45"
+                />
+                <div id="angleInvalid"></div>
+              </div>
+              <input
+                id="calculate"
+                type="button"
+                value="CALCULATE"
+                onclick="validate()"
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="glass answer item4">
-        <h3 class="title">SHORT RADIUS (1D)</h3>
-        <div class="output-row">
-          <div class="labels">
-            <div>I A L</div>
-            <div>O A L</div>
-            <div>L L</div>
-          </div>
-          <div class="data">
-            <div id="shortInside">'Calculate'</div>
-            <div id="shortOutside">'Calculate'</div>
-            <div id="shortLaying">'Calculate'</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="glass answer item3">
-        <h3 class="title">3D RADIUS</h3>
-        <div class="output-row">
-          <div class="labels">
-            <div>I A L</div>
-            <div>O A L</div>
-            <div>L L</div>
-          </div>
-          <div class="data">
-            <div id="threeInside">'Calculate'</div>
-            <div id="threeOutside">'Calculate'</div>
-            <div id="threeLaying">'Calculate'</div>
+        <div class="glass answer">
+          <h3 class="title">LONG RADIUS (1.5D)</h3>
+          <div class="output-row">
+            <div class="labels">
+              <div>I A L</div>
+              <div>O A L</div>
+              <div>L L</div>
+            </div>
+            <div class="data">
+              <div id="longInside">'Calculate'</div>
+              <div id="longOutside">'Calculate'</div>
+              <div id="longLaying">'Calculate'</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="glass answer item5">
-        <h3 class="title">5D RADIUS</h3>
-        <div class="output-row">
-          <div class="labels">
-            <div>I A L</div>
-            <div>O A L</div>
-            <div>L L</div>
+        <div class="glass answer">
+          <h3 class="title">SHORT RADIUS (1D)</h3>
+          <div class="output-row">
+            <div class="labels">
+              <div>I A L</div>
+              <div>O A L</div>
+              <div>L L</div>
+            </div>
+            <div class="data">
+              <div id="shortInside">'Calculate'</div>
+              <div id="shortOutside">'Calculate'</div>
+              <div id="shortLaying">'Calculate'</div>
+            </div>
           </div>
-          <div class="data">
-            <div id="fiveInside">'Calculate'</div>
-            <div id="fiveOutside">'Calculate'</div>
-            <div id="fiveLaying">'Calculate'</div>
+        </div>
+        <div class="glass answer">
+          <h3 class="title">3D RADIUS</h3>
+          <div class="output-row">
+            <div class="labels">
+              <div>I A L</div>
+              <div>O A L</div>
+              <div>L L</div>
+            </div>
+            <div class="data">
+              <div id="threeInside">'Calculate'</div>
+              <div id="threeOutside">'Calculate'</div>
+              <div id="threeLaying">'Calculate'</div>
+            </div>
+          </div>
+        </div>
+        <div class="glass answer">
+          <h3 class="title">5D RADIUS</h3>
+          <div class="output-row">
+            <div class="labels">
+              <div>I A L</div>
+              <div>O A L</div>
+              <div>L L</div>
+            </div>
+            <div class="data">
+              <div id="fiveInside">'Calculate'</div>
+              <div id="fiveOutside">'Calculate'</div>
+              <div id="fiveLaying">'Calculate'</div>
+            </div>
           </div>
         </div>
       </div>
@@ -209,7 +228,7 @@
           <a href="https://www.facebook.com/AmalfiMakesIt"
             ><i class="fab fa-facebook fa-1x"></i
           ></a>
-    
+
           <a href="https://www.instagram.com/amalfi.makes.it/"
             ><i class="fab fa-instagram fa-1x"></i
           ></a>
@@ -230,7 +249,7 @@
         /></a>
       </div>
     </footer>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="trim-script.js"></script>
   </body>
 </html>

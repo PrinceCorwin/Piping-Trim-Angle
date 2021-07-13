@@ -9,6 +9,25 @@ hamburger.addEventListener("click", () => {
   });
 });
 
+// event listener for help and hide images buttons
+let imgVisibility = "show";
+$("#help-btn").click(function () {
+  $("#help").toggle();
+});
+$(".fa-times-circle").click(function () {
+  $("#help").toggle();
+});
+$("#hide-btn").click(function () {
+  if (imgVisibility === "show") {
+    $("#hide-btn-txt").text("Show Image");
+    imgVisibility = "hide";
+  } else {
+    $("#hide-btn-txt").text("Hide Image");
+    imgVisibility = "show";
+  }
+  $("#trim-img").toggle();
+});
+
 const pipeData = {
   0.5: {
     od: 0.84,
@@ -110,7 +129,6 @@ const pipeData = {
     od: 48.0,
   },
 };
-// console.log(typeof pipeData[3].od);
 function validate() {
   // clear error warnings
   let psizeInvalid = document.getElementById("psizeInvalid");
@@ -123,17 +141,12 @@ function validate() {
   let trimAngle = Number(document.getElementById("trim-angle").value);
   if (pipeData[psize] === undefined) {
     psizeInvalid.textContent = "INVALID";
-    // console.log(psizeInvalid);
-    // console.log(typeof psize);
-    // console.log(pipeData[0.5]);
     return;
   }
   if (trimAngle < 0 || trimAngle > 90) {
     angleInvalid.textContent = "INVALID";
-    // console.log(angleInvalid);
     return;
   }
-  // console.log(trimAngle);
   // replace shortrad with returned values
   let short = calculate(1, trimAngle);
   document.getElementById("shortInside").textContent = short[0];
@@ -157,10 +170,7 @@ function validate() {
 
   // CALCULATE FUNCTION
   function calculate(ratio, angle) {
-    // console.log(angle);
     let elbowOD = pipeData[psize].od;
-    // console.log(elbowOD);
-
     let rad = ratio * psize;
     if (psize === 0.5 && ratio === 1.5) {
       rad = 1.5;
@@ -171,8 +181,6 @@ function validate() {
 
     // CALCULATE OUTSIDE ARC LENGTH
 
-    // console.log(angle);
-    // console.log(elbowOD);
     let outsideArcLength = (angle / 360) * (Math.PI * (rad + 0.5 * elbowOD));
     console.log(outsideArcLength);
 
